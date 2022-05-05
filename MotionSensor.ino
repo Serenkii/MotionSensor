@@ -16,15 +16,10 @@ void setup() {
 void loop() {
   detectMotion();
   updateLED();
-  
 }
 
 void updateLED() {
-  if (LEDOnCondition()) {
-    digitalWrite(LED_PIN, HIGH);
-    return;
-  }
-  digitalWrite(LED_PIN, LOW);
+  digitalWrite(LED_PIN, LEDOnCondition());
 }
 
 bool LEDOnCondition() {
